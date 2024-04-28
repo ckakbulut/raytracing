@@ -1,5 +1,8 @@
 #include <iostream>
 
+#include "vec3.h"
+#include "color.h"
+
 // using the PPM format to render images
 void render() {
   // image dimensions
@@ -17,15 +20,8 @@ void render() {
     std::clog << "\rScan lines remaining: " << (image_height - j) << ' ' << std::flush;
     for(int i = 0; i < image_width; i++){
 
-      auto r = double(i) / (image_width-1);
-      auto g = double(j) / (image_height-1);
-      auto b = 0.0;
-
-      int ir = int(255.999 * r);
-      int ig = int(255.999 * g);
-      int ib = int(255.999 * b);
-
-      std::cout << ir << " " << ig << " " << ib << "\n";
+      auto pixel_color = color::Color( double(i)/(image_width-1), double(j)/(image_height-1), 0);
+      color::write_color(std::cout, pixel_color);
     }
   }
 
