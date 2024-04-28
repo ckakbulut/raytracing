@@ -13,6 +13,8 @@ void render() {
 
   // rendering the pixels
   for(int j = 0; j < image_height; j++){
+    // add progress bar to see how far along we are with rendering
+    std::clog << "\rScan lines remaining: " << (image_height - j) << ' ' << std::flush;
     for(int i = 0; i < image_width; i++){
 
       auto r = double(i) / (image_width-1);
@@ -26,6 +28,8 @@ void render() {
       std::cout << ir << " " << ig << " " << ib << "\n";
     }
   }
+
+  std::clog << "\rDone.         \n";
 }
 
 int main(){
