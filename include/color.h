@@ -5,7 +5,9 @@
 
 #include "vec3.h"
 
-void write_color(std::ostream& out, const color& pixel_color) {
+using Color = Vec3; // RGB color, useful when dealing with color related operations
+
+void write_color(std::ostream& out, const Color& pixel_color) {
     auto r = pixel_color.x();
     auto g = pixel_color.y();
     auto b = pixel_color.z();
