@@ -6,7 +6,7 @@
 #include "vec3.h"
 
 namespace color{
-    using Color = Vec3; // RGB color, useful when dealing with color related operations
+    using Color = vec3::Vec3; // RGB color, useful when dealing with color related operations
 
     void write_color(std::ostream& out, const Color& pixel_color) {
         auto r = pixel_color.x();
