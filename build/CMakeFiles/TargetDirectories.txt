@@ -1,4 +1,0 @@
-/Users/Kerem2001/cpp/raytracing/build/CMakeFiles/rebuild_cache.dir
-/Users/Kerem2001/cpp/raytracing/build/CMakeFiles/edit_cache.dir
-/Users/Kerem2001/cpp/raytracing/build/CMakeFiles/main.dir
-/Users/Kerem2001/cpp/raytracing/build/CMakeFiles/raytracing.dir
