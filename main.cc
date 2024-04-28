@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "vec3.h"
-#include "color.h"
+#include "include/vec3.h"
+#include "include/color.h"
 
 // using the PPM format to render images
 void render() {
