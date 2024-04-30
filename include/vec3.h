@@ -68,7 +68,7 @@ namespace vec3{
     };
 
     // Type aliases for Vec3
-    using point = Vec3; // 3D point, useful for geometric clarity
+    using Point3 = Vec3; // 3D point, useful for geometric clarity
 
     // Vec3 Utility Functions
     inline std::ostream& operator<<(std::ostream& out, const Vec3& v){
