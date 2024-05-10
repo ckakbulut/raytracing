@@ -11,10 +11,12 @@ namespace ray {
 
         Ray(const vec3::Point3& origin, const vec3::Vec3& direction) : orig(origin), dir(direction) {}
 
+        // return immutable reference to the origin coordinates
         const vec3::Point3& origin() const {
             return orig;
         }
 
+        // return immutable reference to the direction vector
         const vec3::Vec3& direction() const {
             return dir;
         }
