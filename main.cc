@@ -34,7 +34,7 @@ void render() {
 
   // Calculate the horizontal and vertical delta vectors from pixel to pixel
   vec3::Vec3 pixel_delta_u = viewport_u / image_width;
-  vec3::Vec3 pixel_delta_v = viewport_v / image_width;
+  vec3::Vec3 pixel_delta_v = viewport_v / image_height;
 
   // Calculate the position of the upper left pixel
   vec3::Point3 viewport_upper_left = camera_center - vec3::Vec3(0, 0, focal_length) - viewport_u/2 - viewport_v/2;
