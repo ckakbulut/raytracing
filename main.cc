@@ -5,7 +5,11 @@
 #include "include/ray.h"
 
 color::Color ray_color(const ray::Ray& r) {
-return color::Color(0,0,0);} 
+  vec3::Vec3 unit_direction = vec3::unit_vector(r.direction());
+  float a = 0.5 * (unit_direction.y() + 1.0);
+  // using linear interpolation (lerp) formula to get linearly blended colors on output
+  return (1.0 - a) * color::Color(1.0,1.0,1.0) + a * color::Color(0.5, 0.7, 1.0);
+}
 
 // using the PPM format to render images
 void render() {
@@ -49,7 +53,7 @@ void render() {
       vec3::Point3 pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
       // ray direction isn't a unit vector for simpler code
       vec3::Vec3 ray_direction = pixel_center - camera_center;
-      ray::Ray(camera_center, ray_direction);
+      ray::Ray r(camera_center, ray_direction);
 
       color::Color pixel_color = ray_color(r);
       color::write_color(std::cout, pixel_color);
